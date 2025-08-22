@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>addgrid.org</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+
+      <header>
+          <h1><a href="/">addgrid.org</a></h1>
+          <p>Add a coordinate grid to your image</p>
+      </header>
+        <div class="upload-section">
+            <label for="fileInput" class="upload-area">
+                <div class="upload-icon">🖼️</div>
+                <p>Select image</p>
+            </label>
+          <input type="file" id="fileInput" accept="image/*">
+        </div>
+
+        <div class="controls-section">
+            <div class="grid-options">
+                <div class="option-row">
+                    <label class="label-text">Position:</label>
+                    <div class="button-group">
+                        <button class="btn-icon active" id="labelsTopLeft" title="Top & Left">
+                            <span class="icon-grid">
+                                <span class="grid-tl active"></span>
+                                <span class="grid-tr"></span>
+                                <span class="grid-bl"></span>
+                                <span class="grid-br"></span>
+                            </span>
+                        </button>
+                        <button class="btn-icon" id="labelsBottomRight" title="Bottom & Right">
+                            <span class="icon-grid">
+                                <span class="grid-tl"></span>
+                                <span class="grid-tr"></span>
+                                <span class="grid-bl"></span>
+                                <span class="grid-br active"></span>
+                            </span>
+                        </button>
+                        <button class="btn-icon" id="labelsAll" title="All sides">
+                            <span class="icon-grid">
+                                <span class="grid-tl active"></span>
+                                <span class="grid-tr active"></span>
+                                <span class="grid-bl active"></span>
+                                <span class="grid-br active"></span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="option-row">
+                        <label class="label-text">Columns:</label>
+                    <div class="number-input-group">
+                        <div class="number-control">
+                            <button class="btn-number" id="colsDown">−</button>
+                            <span class="number-display" id="colsDisplay">6</span>
+                            <button class="btn-number" id="colsUp">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="option-row">
+                        <label class="label-text">Rows:</label>
+                    <div class="number-input-group">
+                        <div class="number-control">
+                            <button class="btn-number" id="rowsDown">−</button>
+                            <span class="number-display" id="rowsDisplay">6</span>
+                            <button class="btn-number" id="rowsUp">+</button>
+                        </div>
+                    </div>
+                </div>
+
+              <div class="option-row">
+                  <label class="checkbox-label">
+                      <input type="checkbox" id="addGrid">
+                      <span class="checkmark"></span>
+                      Lines
+                  </label>
+              </div>
+              <div class="option-row">
+                  <label class="checkbox-label">
+                      <input type="checkbox" id="darkText">
+                      <span class="checkmark"></span>
+                      Dark
+                  </label>
+              </div>
+              <div class="option-row">
+                  <label class="checkbox-label">
+                      <input type="checkbox" id="addWatermark">
+                      <span class="checkmark"></span>
+                      Watermark
+                  </label>
+              </div>
+
+            </div>
+
+        </div>
+
+        <canvas id="workingCanvas" style="display: none;"></canvas>
+
+        <div class="result-section" id="resultSection" style="display: none;">
+            <div class="result-preview">
+                <canvas id="resultCanvas"></canvas>
+            </div>
+            <div class="download-section">
+                <button class="btn btn-primary" id="downloadBtn">
+                    <span>📥</span>
+                    Download Image
+                </button>
+            </div>
+        </div>
+
+        <footer>
+            <div class="donation-section">
+                <div class="donation-placeholder">
+<script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support me on Ko-fi', '#72a4f2', 'V7V01K24RR');kofiwidget2.draw();</script> 
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
