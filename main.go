@@ -28,6 +28,10 @@ Allow: /
 Sitemap: https://addgrid.org/sitemap.xml`))
 	})
 
+	http.HandleFunc("/thumbnail.png", func(w http.ResponseWriter, r *http.Request) {
+		http.ServeFile(w, r, "thumbnail.png")
+	})
+
 	http.HandleFunc("/sitemap.xml", func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Content-Type", "application/xml")
 		w.Write([]byte(`<?xml version="1.0" encoding="UTF-8"?>
