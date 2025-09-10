@@ -385,3 +385,25 @@ footer {
         padding: 20px;
     }
 }
+
+.github-section {
+    text-align: center;
+    padding: 20px;
+}
+
+.github-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    background-color: #24292e;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+.github-button:hover {
+    background-color: #1b1f23;
+}
