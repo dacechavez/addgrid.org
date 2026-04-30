@@ -21,7 +21,6 @@ class GridSnap {
         this.workingCanvas = document.getElementById('workingCanvas');
         this.workingCtx = this.workingCanvas.getContext('2d');
 
-        this.addGridCheckbox = document.getElementById('addGrid');
         this.labelsTopLeft = document.getElementById('labelsTopLeft');
         this.labelsBottomRight = document.getElementById('labelsBottomRight');
         this.labelsAll = document.getElementById('labelsAll');
@@ -46,7 +45,6 @@ class GridSnap {
             }
         });
 
-        this.addGridCheckbox.addEventListener('change', () => this.processImage());
 
         this.labelsTopLeft.addEventListener('click', () => this.setLabelPosition('topLeft'));
         this.labelsBottomRight.addEventListener('click', () => this.setLabelPosition('bottomRight'));
@@ -106,8 +104,6 @@ class GridSnap {
 
     processImage() {
         if (!this.currentImage) return;
-
-        this.settings.showGrid = this.addGridCheckbox.checked;
 
         // Set up working canvas with image
         this.workingCanvas.width = this.currentImage.width;
